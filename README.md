@@ -1,4 +1,4 @@
-# 🚀 GitHub Action Repo
+# 🚀 GitHub Action Repository
 
 This is the **GitHub Action Repo** used to test the webhook receiver.
 
