@@ -1,4 +1,4 @@
-# action-repo
+# Action-Repository
 
  How to test:
 ✅ Go to your action-repo on GitHub
