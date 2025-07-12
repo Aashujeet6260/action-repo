@@ -1,42 +1,64 @@
-# Action-Repository
+# 🚀 GitHub Action Repo
 
- How to test:
-✅ Go to your action-repo on GitHub
- ✅ Do one of these:
-Make a new push → Edit your README.md → Commit & push.
+This is the **GitHub Action Repo** used to test the webhook receiver.
 
+It is used to trigger **Push**, **Pull Request**, and **Merge** events which are sent to the webhook receiver for processing.
 
-Open a new pull request.
+---
 
+## 📌 Purpose
 
-This will:
-GitHub → sends webhook to your ngrok URL.
+✅ Contains dummy code, files, or a README so you can make commits and pushes.
 
+✅ Used to open and close pull requests to test your webhook receiver.
 
-ngrok → forwards to your Flask app /webhook.
+✅ Connected to the webhook URL via GitHub Settings → Webhooks.
 
+---
 
-Flask → saves the event to your local MongoDB.
+## ⚙️ How to Use
 
+1️⃣ Clone this repo:
 
-✅ Then:
-Refresh MongoDB Compass → You should see a new webhook_db database.
-Inside it → you’ll see an events collection → inside that your push or pull request data.
+```bash
+git clone https://github.com/Aashujeet6260/action-repo.git
+cd action-repo
+```
 
-How to test:
-✅ Go to your action-repo on GitHub
- ✅ Do one of these:
-Make a new push → Edit your README.md → Commit & push.
-Open a new pull request.
-This will:
-GitHub → sends webhook to your ngrok URL.
-ngrok → forwards to your Flask app /webhook.
-Flask → saves the event to your local MongoDB.
+2️⃣ Make some changes:
 
-✅ Then:
-Refresh MongoDB Compass → You should see a new webhook_db database.
+- Edit `README.md` or add new files.
+- Commit and push:
 
+```bash
+git add .
+git commit -m "Test push event"
+git push origin main
+```
 
-Inside it → you’ll see an events collection → inside that your push or pull request data.
+✅ This will trigger a **Push** event.
 
+3️⃣ Create a pull request:
+
+- Create a new branch:
+
+```bash
+git checkout -b feature/test-pr
+# Make changes
+# Commit and push branch
+```
+
+- Go to GitHub → Open a PR → Merge the PR → This triggers **Pull Request** and **Merge** events.
+
+4️⃣ Verify your webhook receiver logs and your MongoDB Compass database.
+
+---
+
+## 📚 Related Repo
+
+➡️ [webhook-repo](https://github.com/Aashujeet6260/webhook-repo) — the Flask server that receives these events.
+
+---
+
+**Happy Testing! 🚀**
 
